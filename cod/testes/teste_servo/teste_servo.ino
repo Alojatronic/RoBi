@@ -3,20 +3,18 @@
 
 Servo myservo;  // create servo object to control a servo
 int val;        // variable to read the value from the analog pin
-int timeServo = 100;  //
+int timeServo = 500;  //
 
 void setup() {
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  myservo.attach(7);  // attaches the servo on pin 9 to the servo object
 }
 
 
 void loop() {
-  
-  val = map(90, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
-  myservo.write(val);                  // sets the servo position according to the scaled value
-  delay(timeServo);                           // waits for the servo to get there
-  val = map(0, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
-  myservo.write(val);                  // sets the servo position according to the scaled value
+    // scale it to use it with the servo (value between 0 and 180)
+  myservo.write(0);                  // sets the servo position according to the scaled value
+  delay(timeServo);                           // waits for the servo to get there     // scale it to use it with the servo (value between 0 and 180)
+  myservo.write(0);                  // sets the servo position according to the scaled value
   delay(timeServo);                           // waits for the servo to get there
   
 }
